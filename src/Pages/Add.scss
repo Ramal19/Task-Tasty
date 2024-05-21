@@ -1,0 +1,45 @@
+.form{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px 0;
+    align-items: center;
+
+    button{
+
+        width: 100px;
+        padding: 20px 0;
+        border: none;
+        border-radius: 10px;
+        background-color: #fb900a;
+        font-size: 15px;
+    }
+
+    form{
+
+        width: 500px;
+        height: 500px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        label{
+
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input{
+
+            width: 90%;
+            height: 50px;
+            border: 2px solid black;
+            outline: none;
+        }
+    }
+}

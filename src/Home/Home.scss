@@ -1,0 +1,113 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+
+    display: flex;
+    height: 700px;
+    padding: 300px 0;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    background-image: url("https://preview.colorlib.com/theme/tasty/images/bg_1.jpg.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: -80px;
+    color: #fff;
+    // position: relative;
+    font-family: "Indie Flower", cursive;
+
+    h1{
+
+        margin-bottom: 202px;
+
+    }
+
+    div{
+
+        background-color: #ffb400;
+        padding: 50px;
+        display: flex;
+        gap: 15px;
+
+        input{
+
+            height: 52px;
+        }
+
+        select{
+
+            height: 52px;
+            width: 100px;
+        }
+    }
+}
+
+
+
+.sectionOne{
+
+    display: flex;
+    align-items: center;
+    padding: 0 300px;
+    gap: 50px;
+    font-family: "Mulish", sans-serif;
+
+    .text{
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h6{
+            color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.sectionTwo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Mulish", sans-serif;
+    padding: 100px 300px;
+    gap: 20px;
+
+    .dataSection{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+
+        .data{
+
+            border: 2px solid black;
+
+            .div{
+
+                display: flex;
+                padding: 20px;
+                align-items: center;
+                gap: 15px;
+                
+            }
+        }
+    }
+    
+    .btnO{
+
+        width: 100px;
+        padding: 20px 0;
+        border: none;
+        border-radius: 10px;
+        background-color: #fb900a;
+        font-size: 15px;
+    }
+}
