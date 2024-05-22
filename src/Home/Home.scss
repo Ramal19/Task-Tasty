@@ -37,7 +37,33 @@ header{
         input{
 
             height: 52px;
+            background-color: transparent;
+            border: 1px solid black;
+            padding: 10px;
+            outline: none;
+            font-size: 16px;
+
         }
+
+        input[type="submit"]{
+
+            background-color: #fff;
+            border: none;
+        }
+
+        select{
+
+            background-color: transparent;
+            border: 1px solid black;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        ::placeholder{
+
+            color: black;
+        }
+
 
         select{
 
@@ -79,6 +105,25 @@ header{
     padding: 100px 300px;
     gap: 20px;
 
+    .btn{
+
+        display: flex;
+        gap: 10px;
+        
+        button{
+
+            width: 100px;
+            padding: 10px 0;
+            border: none;
+            border-radius: 10px;
+            background-color: #fb900a;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     .dataSection{
 
         display: flex;
@@ -109,5 +154,47 @@ header{
         border-radius: 10px;
         background-color: #fb900a;
         font-size: 15px;
+    }
+}
+
+
+.sectionThree{
+
+    width: 100%;
+    padding: 100px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .background{
+
+        background-image: url("https://preview.colorlib.com/theme/tasty/images/bg_3.jpg.webp");
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        padding: 20px 0;
+    }
+
+    .wrap{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px 0;
+
+        .flex{
+
+            width: 350px;
+            height: 200px;
+            border: 2px solid #fff;
+            background-color: #9d692b;
+
+        }
     }
 }

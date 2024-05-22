@@ -36,3 +36,18 @@
         }
     }
 }
+
+
+@media (max-width: 769px ) {
+    
+    .navbar{
+
+        ul{
+
+            .menu{
+
+                display: flex;
+            }
+        }
+    }
+}

@@ -7,11 +7,11 @@ const Footer = () => {
         <h2>instagram</h2>
       </div>
       <div className="img">
-        <img src=""/>
-        <img src=""/>
-        <img src=""/>
-        <img src=""/>
-        <img src=""/>
+        <img src="https://preview.colorlib.com/theme/tasty/images/insta-2.jpg.webp"/>
+        <img src="https://preview.colorlib.com/theme/tasty/images/insta-3.jpg.webp"/>
+        <img src="https://preview.colorlib.com/theme/tasty/images/insta-2.jpg.webp"/>
+        <img src="https://preview.colorlib.com/theme/tasty/images/insta-5.jpg.webp"/>
+        <img src="https://preview.colorlib.com/theme/tasty/images/insta-1.jpg.webp"/>
       </div>
       <div className='foot'>
         <div>

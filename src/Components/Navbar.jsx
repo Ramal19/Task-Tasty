@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Navbar.scss'
+import { RiMenuFill } from 'react-icons/ri'
 
 const Navbar = () => {
   return (
@@ -17,6 +18,7 @@ const Navbar = () => {
                 <li>Contact</li>
                 <li>Blog</li>
                 <li>Special</li>
+                <li className='menu' style={{display: 'none'}}><RiMenuFill /> Menu</li>
             </ul>
         </nav>
     </>

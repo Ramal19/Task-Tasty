@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react'
 
 const Main = () => {
 
-    const [data, setdata] = useState([])
+    const [data, setdata] = useState([]);
+    const [inpValue, setInpVAlue] = useState("");
+    const [cngValue, setCngValue] = useState("normal")
   
     useEffect(() => {
       
@@ -15,27 +17,54 @@ const Main = () => {
 
       axios.delete(`http://localhost:8000/users/${id}`)
     }
+
+    const sortData = () => {
+
+      if (cngValue == "asc") {
+        
+        return data.toSorted((a, b)=> a.price - b.price)
+      }else if ( cngValue == "des"){
+        return data.toSorted((a, b)=> b.price - a.price)
+      }else{
+        return [...data]
+      }
+    }
+
+    let sortedData = sortData()
+
+    const filterData = sortedData.filter((inf) => inf.name.toUpperCase().startsWith(inpValue.toUpperCase()))
+    
     
   return (
-    <>
+    <div div style={{display: 'flex', flexDirection: 'column'}}>
+      <div style={{display: 'flex', justifyContent: 'center', marginBottom: '15px', gap: '20px'}}>
+        <input type="text" onInput={(e)=>setInpVAlue(e.target.value)} style={{width: '30%', height: '50px', fontSize: '16px', padding: '20px'}} />
+        <select onChange={(e)=>setCngValue(e.target.value)} style={{width: '30%',  height: '50px', fontSize: '16px'}}>
+          <option value="normal">Default</option>
+          <option value="asc">Artan sira ile</option>
+          <option value="des">Azalan sira ile</option>
+        </select>
+      </div>
+      <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px'}}>
         {
-            data.map(item=>{
+            filterData.map(item=>{
                 return(
                   <div className='data' key={item.id}>
                     <div className='div'>
                       <img style={{width: '70px', height: '70px', borderRadius: '9999px'}} src={item.img} />
                       <div>
-                        <h1>{item.name}</h1>
+                        <h1 style={{width: '300px'}}>{item.name}</h1>
                         <p>{item.content}</p>
                       </div>
-                      <span>$ {item.price}</span>
+                      <span style={{width: '45px'}}>$ {item.price}</span>
                       <button onClick={()=>deleteData(item.id)}>❌</button>
                     </div>
                   </div>
                 )
               })
             }
-    </>
+          </div>
+    </div>
   )
 }
 

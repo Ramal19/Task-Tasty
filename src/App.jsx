@@ -1,19 +1,22 @@
 import { Route, Routes } from 'react-router-dom'
-import Add from './Pages/Add'
 import Layout from './Layout/Layout'
 import Home from './Home/Home'
 import Main from './Section/Main'
 import Desserts from './Section/Desserts'
+import AddMain from './Pages/AddMain'
+import AddDesserts from './Pages/AddDesserts'
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route element={<Layout/>} path='/'>
-          <Route index element={<Home/>}></Route>
-          <Route element={<Main/>} path='/'/>
-          <Route element={<Desserts/>} path='/desserts'/>
-          <Route element={<Add/>} path='/add'/>
+          <Route path='/' element={<Home/>}>
+            <Route element={<Main/>} path='/'/>
+            <Route element={<Desserts/>} path='/desserts'/>
+          </Route>
+          <Route element={<AddMain/>} path='/addmain'/>
+          <Route element={<AddDesserts/>} path='/adddesserts'/>
         </Route>
       </Routes>
     </>

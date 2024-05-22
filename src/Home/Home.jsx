@@ -2,7 +2,7 @@ import { useState } from 'react'
 import'./Home.scss'
 import { useEffect } from 'react'
 import Main from '../Section/Main'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 const Home = () => {
 
@@ -37,16 +37,53 @@ const Home = () => {
           </h1>
 
           <div className="btn">
-            <button>Main</button>
-            <button>Desserts</button>
+            <button><Link style={{color: '#fff', textDecoration: 'none'}} to={'/'}>Main</Link></button>
+            <button><Link style={{color: '#fff', textDecoration: 'none'}} to={'/desserts'}>Desserts</Link></button>
             <button>Drinks</button>
           </div>
 
           <div className="dataSection">
-            <Main/>
+            <Outlet/>
           </div>
           <p>Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
-          <button className='btnO'><Link to={'/add'} style={{color: '#fff', textDecoration: 'none'}}>Add</Link></button>
+          <div className="btn">
+            <Link to={'/addmain'} style={{color: '#fff', textDecoration: 'none'}}><button className='btnO'>Add Main</button></Link>
+            <Link to={'/adddesserts'} style={{color: '#fff', textDecoration: 'none'}}><button className='btnO'>Add Desserts</button></Link>
+          </div>
+        </section>
+
+        <section className="sectionThree">
+          <div className='background'>
+            <h1>Our Specialties</h1>
+          </div>
+          <div className='wrap'>
+            <div className="flex">
+              <h1></h1>
+              <p></p>
+              <span></span>
+            </div>
+            <div className="flex">
+              <img src="" />
+            </div>
+            <div className="flex">
+              
+            </div>
+            <div className="flex">
+              <img src="" />
+            </div>
+            <div className="flex"> 
+              
+            </div>
+            <div className="flex">
+              <img src="" />
+            </div>
+            <div className="flex">
+
+            </div>
+            <div className="flex">
+              <img src="" />
+            </div>
+          </div>
         </section>
     </>
   )
